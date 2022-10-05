@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import Image from 'next/image';
+import ImagePreview from '../components/PreviewImage';
 
 export default function Home() {
   const [images, setImages] = useState([]);
   const [image, setImage] = useState(null);
   const [imageValue, setImageValue] = useState('');
+  const [isUploading, setIsUploading] = useState(false);
 
   async function handleFileUpload(event) {
     event.preventDefault();
@@ -18,6 +20,8 @@ export default function Home() {
     formData.append('file', image);
     formData.append('tags', tags);
     formData.append('upload_preset', process.env.NEXT_PUBLIC_UPLOAD_PRESET);
+
+    setIsUploading(true);
 
     const url = `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDNAME}/upload`;
     const response = await fetch(url, {
@@ -41,6 +45,7 @@ export default function Home() {
       },
     ]);
     setImage(null);
+    setIsUploading(false);
 
     const formValues = Object.fromEntries(formData);
     console.log(formValues, 'from Entries');
@@ -85,7 +90,10 @@ export default function Home() {
             </label>
           </section>
         </fieldset>
-        <button type="submit">Upload</button>
+
+        {image && <ImagePreview file={image} />}
+
+        <button type="submit">{isUploading ? 'Uploading …' : 'Upload'}</button>
       </form>
       {images.length > 0 && (
         <section>

@@ -2,12 +2,17 @@
 
 A simple client-based cloudinary integration on NextJS.
 
-It takes an image to upload, tries to find a face on the picture, and crops the image. That´s all 😉
+It takes an image to upload, tries to find a face on the picture, and crops the image.
 
-See the app in progress:
+In addition, the tags, which are selected by the user, will be stored as metadata attached to the image in cloudinary.
 
-<video src="https://res.cloudinary.com/tk-one/video/upload/e_accelerate:20,vc_h264/v1664989198/videos/next-cloudinary-app_kgcgk5.mov" controls="controls" style="max-width: 427px;">
+That´s all 😉
+
+### See the app in progress:
+
+<video src="https://res.cloudinary.com/tk-one/video/upload/e_accelerate:19,vc_h264/v1664991088/videos/next-cloudinary-app-with-preview_teo8yf.mov" controls="controls" style="max-width: 427px;">
 </video>
+
 ## Configure your cloudinary access
 
 Create a file `.env.local` from `env.example`:
