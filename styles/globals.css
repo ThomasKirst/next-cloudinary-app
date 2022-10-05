@@ -15,6 +15,19 @@ a {
   box-sizing: border-box;
 }
 
+main {
+  width: 32rem;
+  margin: 0 auto;
+}
+
+.responsive-image {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1;
+  width: 50%;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
