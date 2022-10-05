@@ -10,8 +10,7 @@ That´s all 😉
 
 ### See the app in progress:
 
-<video src="https://res.cloudinary.com/tk-one/video/upload/e_accelerate:19,vc_h264/v1664991088/videos/next-cloudinary-app-with-preview_teo8yf.mov" controls="controls" style="max-width: 427px;">
-</video>
+https://user-images.githubusercontent.com/4458383/194127524-3818b7a7-5708-474e-a5b8-4aa8d06e2033.mov
 
 ## Configure your cloudinary access
 
