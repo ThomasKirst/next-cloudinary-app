@@ -64,24 +64,27 @@ export default function Home() {
             setImage(event.target.files[0]);
           }}
         />
-        <p>
-          <label>
-            <input type="checkbox" name="tags" value="woman" />
-            Woman
-          </label>
-          <label>
-            <input type="checkbox" name="tags" value="happy" />
-            Happy
-          </label>
-          <label>
-            <input type="checkbox" name="tags" value="man" />
-            Man
-          </label>
-          <label>
-            <input type="checkbox" name="tags" value="student" />
-            Student
-          </label>
-        </p>
+        <fieldset>
+          <legend>Tags</legend>
+          <section className="tags">
+            <label>
+              <input type="checkbox" name="tags" value="woman" />
+              Woman
+            </label>
+            <label>
+              <input type="checkbox" name="tags" value="happy" />
+              Happy
+            </label>
+            <label>
+              <input type="checkbox" name="tags" value="man" />
+              Man
+            </label>
+            <label>
+              <input type="checkbox" name="tags" value="student" />
+              Student
+            </label>
+          </section>
+        </fieldset>
         <button type="submit">Upload</button>
       </form>
       {images.length > 0 && (

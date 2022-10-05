@@ -1,34 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextJS Cloudinary Upload
 
-## Getting Started
+A simple client-based cloudinary integration on NextJS.
 
-First, run the development server:
+It takes an image to upload, tries to find a face on the picture, and crops the image. That´s all 😉
+
+See the app in progress:
+
+<video src="https://res.cloudinary.com/tk-one/video/upload/e_accelerate:20,vc_h264/v1664989198/videos/next-cloudinary-app_kgcgk5.mov" controls="controls" style="max-width: 427px;">
+</video>
+## Configure your cloudinary access
+
+Create a file `.env.local` from `env.example`:
 
 ```bash
-npm run dev
-# or
-yarn dev
+NEXT_PUBLIC_CLOUDNAME=
+NEXT_PUBLIC_UPLOAD_PRESET=
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Enter your cloud name and the name of your upload preset (unsigned) from cloudinary here.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Run the app
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- `npm install`
+- `npm run dev`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Enjoy 🥳
